@@ -1,0 +1,9 @@
+version: 1
+updated: 2026-03-26
+
+# Master index of all marketplace items.
+# Each entry is a summary — full metadata lives in the item's manifest.yaml.
+# Fields: id, type, name, version, description, author, tags, path
+# Type-specific extra fields (event, command, merge_key) are included where relevant.
+
+items: []

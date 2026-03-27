@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "manifest-settings",
+  "title": "Settings Manifest",
+  "description": "Manifest for a reusable settings.json fragment",
+  "type": "object",
+  "required": ["id", "name", "type", "version", "description", "author", "tags", "merge_key", "files", "install"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "settings"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "minItems": 1
+    },
+    "merge_key": {
+      "type": "string",
+      "description": "Dot-path into settings.json where the snippet merges (e.g. permissions.allow, hooks, env)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["user", "project", "both"],
+      "description": "Recommended scope for applying this snippet."
+    },
+    "conflicts_with": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs of other settings items that should not be combined with this one."
+    },
+    "files": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Must include snippet.json."
+    },
+    "install": {
+      "type": "object",
+      "required": ["instructions"],
+      "additionalProperties": false,
+      "properties": {
+        "instructions": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
