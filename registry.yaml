@@ -6,4 +6,12 @@ updated: 2026-03-26
 # Fields: id, type, name, version, description, author, tags, path
 # Type-specific extra fields (event, command, merge_key) are included where relevant.
 
-items: []
+items:
+  - id: blinko
+    type: skill
+    name: Blinko
+    version: 1.0.0
+    description: Make direct API calls to a self-hosted Blinko instance via curl. Supports notes, tags, files, user info, config, and analytics.
+    author: schumannjon
+    tags: [blinko, notes, api, self-hosted]
+    path: skills/blinko

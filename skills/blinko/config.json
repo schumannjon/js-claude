@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://YOUR_BLINKO_INSTANCE_URL",
+  "tokenEnvVar": "BLINKO_API_KEY",
+  "defaultNoteType": 0,
+  "preferences": {
+    "defaultPageSize": 20,
+    "defaultOrderBy": "desc"
+  }
+}
