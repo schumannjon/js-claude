@@ -60,7 +60,7 @@ For example, after installing `blinko`:
 
 | Plugin | Invoke | Description |
 |--------|--------|-------------|
-| [blinko](plugins/blinko/) | `/blinko` | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics. |
+| [blinko](plugins/blinko/README.md) | `/blinko` | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics. |
 
 ### Hooks
 
@@ -79,29 +79,6 @@ For example, after installing `blinko`:
 | Plugin | Description |
 |--------|-------------|
 | — | — |
-
----
-
-## Plugin Setup Notes
-
-Some plugins require configuration before use.
-
-### blinko
-
-Requires a running [Blinko](https://github.com/blinko-space/blinko) instance and an API token.
-
-1. Edit `~/.claude/plugins/cache/js-claude/blinko/skills/blinko/config.json` and set your instance URL:
-   ```json
-   {
-     "baseUrl": "https://your-blinko-instance.com",
-     ...
-   }
-   ```
-2. Store your API token in a Windows environment variable:
-   ```powershell
-   [System.Environment]::SetEnvironmentVariable('BLINKO_API_KEY', 'your-token-here', 'User')
-   ```
-   Get a token from your Blinko instance under **Settings > Access Token**.
 
 ---
 
