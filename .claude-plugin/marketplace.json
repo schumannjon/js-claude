@@ -1,0 +1,18 @@
+{
+  "name": "js-claude",
+  "owner": {
+    "name": "schumannjon"
+  },
+  "metadata": {
+    "description": "Personal collection of Claude Code plugins — skills, hooks, MCP servers, agents, and more.",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "blinko",
+      "source": "./plugins/blinko",
+      "description": "Make direct API calls to a self-hosted Blinko instance via curl. Covers notes, tags, file uploads, user info, config, and analytics.",
+      "keywords": ["blinko", "notes", "api", "self-hosted"]
+    }
+  ]
+}

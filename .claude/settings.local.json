@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /c/git/js-claude log --oneline -10)",
+      "Bash(git:*)",
+      "Read(//c/Users/jonat/.claude/skills/**)",
+      "Read(//c/Users/jonat/.claude/skills//**)"
+    ]
+  }
+}

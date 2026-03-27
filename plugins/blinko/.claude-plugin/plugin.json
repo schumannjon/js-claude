@@ -1,0 +1,9 @@
+{
+  "name": "blinko",
+  "description": "Make direct API calls to a self-hosted Blinko instance via curl. Covers notes, tags, file uploads, user info, config, and analytics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "schumannjon"
+  },
+  "keywords": ["blinko", "notes", "api", "self-hosted"]
+}

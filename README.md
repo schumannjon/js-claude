@@ -1,62 +1,54 @@
 # Claude Marketplace
 
-A personal collection of Claude Code extensions — skills, hooks, MCP servers, prompts, settings snippets, and agents. Organized as plain YAML/JSON manifests with no build step required.
+A personal collection of Claude Code plugins following the official [Claude Code plugin marketplace](https://docs.anthropic.com/en/docs/claude-code/plugin-marketplaces) format.
 
-> **Reference:** [Claude Code Skills Documentation](https://docs.anthropic.com/en/docs/claude-code/skills)
+**Reference docs:**
+- [Plugin Marketplaces](https://docs.anthropic.com/en/docs/claude-code/plugin-marketplaces)
+- [Create Plugins](https://docs.anthropic.com/en/docs/claude-code/plugins)
+- [Skills](https://docs.anthropic.com/en/docs/claude-code/skills)
 
-## Installing an Item
+## Installing This Marketplace
 
-| Type | Steps |
-|------|-------|
-| **skill** | Copy the `.md` file to `~/.claude/skills/<name>/` |
-| **hook** | Copy the script to `~/.claude/hooks/`, `chmod +x` it, merge `settings-snippet.json` into your `settings.json` under `"hooks"` |
-| **mcp** | Merge `settings-snippet.json` into your `settings.json` under `"mcpServers"` |
-| **agent** | Copy the `.md` file to `~/.claude/agents/` |
-| **prompt** | Paste directly into your conversation or reference from `CLAUDE.md` |
-| **settings** | Merge `snippet.json` into your `settings.json` at the path noted in the manifest's `merge_key` |
+```
+/plugin marketplace add schumannjon/js-claude
+```
 
-Each item's directory contains a `manifest.yaml` with full install instructions.
+Then install individual plugins:
+
+```
+/plugin install <name>@js-claude
+```
 
 ---
 
-## Skills
+## Plugins
 
-| Name | Description |
-|------|-------------|
-| [blinko](skills/blinko/) | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics endpoints. |
+### Skills
 
-## Hooks
+| Plugin | Description |
+|--------|-------------|
+| [blinko](plugins/blinko/) | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics. |
 
-| Name | Event | Description |
-|------|-------|-------------|
-| — | — | — |
+### Hooks
 
-## MCP Servers
-
-| Name | Description |
-|------|-------------|
+| Plugin | Description |
+|--------|-------------|
 | — | — |
 
-## Prompts
+### MCP Servers
 
-| Name | Description |
-|------|-------------|
+| Plugin | Description |
+|--------|-------------|
 | — | — |
 
-## Settings
+### Agents
 
-| Name | Description |
-|------|-------------|
-| — | — |
-
-## Agents
-
-| Name | Description |
-|------|-------------|
+| Plugin | Description |
+|--------|-------------|
 | — | — |
 
 ---
 
-## Adding Items
+## Contributing
 
-See [CLAUDE.md](CLAUDE.md) for conventions, manifest schemas, and registry integrity rules.
+See [CLAUDE.md](CLAUDE.md) for plugin structure conventions and how to add new plugins.
