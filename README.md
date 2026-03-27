@@ -7,16 +7,49 @@ A personal collection of Claude Code plugins following the official [Claude Code
 - [Create Plugins](https://docs.anthropic.com/en/docs/claude-code/plugins)
 - [Skills](https://docs.anthropic.com/en/docs/claude-code/skills)
 
-## Installing This Marketplace
+---
+
+## Getting Started
+
+### 1. Add the marketplace
+
+Run this inside Claude Code:
 
 ```
 /plugin marketplace add schumannjon/js-claude
 ```
 
-Then install individual plugins:
+### 2. Install a plugin
 
 ```
-/plugin install <name>@js-claude
+/plugin install <plugin-name>@js-claude
+```
+
+### 3. Use the plugin
+
+Skills are invoked with a `/` slash command:
+
+```
+/<plugin-name> <your request>
+```
+
+For example, after installing `blinko`:
+
+```
+/blinko list my recent notes
+/blinko create a note: "Remember to update dependencies"
+```
+
+### Updating plugins
+
+```
+/plugin marketplace update js-claude
+```
+
+### Removing a plugin
+
+```
+/plugin uninstall <plugin-name>@js-claude
 ```
 
 ---
@@ -25,9 +58,9 @@ Then install individual plugins:
 
 ### Skills
 
-| Plugin | Description |
-|--------|-------------|
-| [blinko](plugins/blinko/) | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics. |
+| Plugin | Invoke | Description |
+|--------|--------|-------------|
+| [blinko](plugins/blinko/) | `/blinko` | Make direct API calls to a self-hosted Blinko instance. Covers notes, tags, file uploads, user info, config, and analytics. |
 
 ### Hooks
 
@@ -46,6 +79,29 @@ Then install individual plugins:
 | Plugin | Description |
 |--------|-------------|
 | — | — |
+
+---
+
+## Plugin Setup Notes
+
+Some plugins require configuration before use.
+
+### blinko
+
+Requires a running [Blinko](https://github.com/blinko-space/blinko) instance and an API token.
+
+1. Edit `~/.claude/plugins/cache/js-claude/blinko/skills/blinko/config.json` and set your instance URL:
+   ```json
+   {
+     "baseUrl": "https://your-blinko-instance.com",
+     ...
+   }
+   ```
+2. Store your API token in a Windows environment variable:
+   ```powershell
+   [System.Environment]::SetEnvironmentVariable('BLINKO_API_KEY', 'your-token-here', 'User')
+   ```
+   Get a token from your Blinko instance under **Settings > Access Token**.
 
 ---
 
