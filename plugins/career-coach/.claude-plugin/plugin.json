@@ -1,0 +1,9 @@
+{
+  "name": "career-coach",
+  "description": "Career development assistant — manage Personal Development Plans, draft self-reviews, track performance dimensions, and prepare for review cycles. Works with any company's performance framework.",
+  "version": "1.0.0",
+  "author": {
+    "name": "schumannjon"
+  },
+  "keywords": ["career", "pdp", "self-review", "performance", "development", "review"]
+}

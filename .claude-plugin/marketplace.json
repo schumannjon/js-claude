@@ -13,6 +13,12 @@
       "source": "./plugins/blinko",
       "description": "Make direct API calls to a self-hosted Blinko instance via curl. Covers notes, tags, file uploads, user info, config, and analytics.",
       "keywords": ["blinko", "notes", "api", "self-hosted"]
+    },
+    {
+      "name": "career-coach",
+      "source": "./plugins/career-coach",
+      "description": "Career development assistant — manage Personal Development Plans, draft self-reviews, track performance dimensions, and prepare for review cycles.",
+      "keywords": ["career", "pdp", "self-review", "performance", "development", "review"]
     }
   ]
 }
